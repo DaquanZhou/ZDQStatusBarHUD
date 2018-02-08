@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdU-sB-bht">
+                                <rect key="frame" x="40" y="100" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="dvh-7i-FiT"/>
+                                    <constraint firstAttribute="height" constant="40" id="h4m-bW-JBA"/>
+                                </constraints>
+                                <state key="normal" title="成功"/>
+                                <connections>
+                                    <action selector="success:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJD-Ag-yG8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbz-u2-rxa">
+                                <rect key="frame" x="40" y="165" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="R8T-mG-ICn"/>
+                                    <constraint firstAttribute="height" constant="40" id="bgZ-tT-02K"/>
+                                </constraints>
+                                <state key="normal" title="失败"/>
+                                <connections>
+                                    <action selector="fail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4HA-49-Se5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-2N-qJg">
+                                <rect key="frame" x="40" y="230" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Evd-L4-5kd"/>
+                                    <constraint firstAttribute="height" constant="40" id="TzQ-dk-lpt"/>
+                                </constraints>
+                                <state key="normal" title="进行中"/>
+                                <connections>
+                                    <action selector="loading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQK-jt-asp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syq-HQ-Ca5">
+                                <rect key="frame" x="40" y="295" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Miz-7g-YD9"/>
+                                    <constraint firstAttribute="width" constant="100" id="odx-KF-k6K"/>
+                                </constraints>
+                                <state key="normal" title="提示信息"/>
+                                <connections>
+                                    <action selector="tipMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQ4-tI-bn3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7X-1v-H56" userLabel="停止加载">
+                                <rect key="frame" x="40" y="360" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="PQc-MC-gLe"/>
+                                    <constraint firstAttribute="height" constant="40" id="qdd-0y-1AU"/>
+                                </constraints>
+                                <state key="normal" title="停止加载"/>
+                                <connections>
+                                    <action selector="hide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFM-aZ-DXt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V7X-1v-H56" firstAttribute="leading" secondItem="PdU-sB-bht" secondAttribute="leading" id="4nv-Hd-Q3k"/>
+                            <constraint firstItem="syq-HQ-Ca5" firstAttribute="leading" secondItem="PdU-sB-bht" secondAttribute="leading" id="66d-r8-UJ5"/>
+                            <constraint firstItem="V7X-1v-H56" firstAttribute="top" secondItem="syq-HQ-Ca5" secondAttribute="bottom" constant="25" id="Anx-9x-cO0"/>
+                            <constraint firstItem="PdU-sB-bht" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GAa-vM-8OF"/>
+                            <constraint firstItem="JGn-2N-qJg" firstAttribute="leading" secondItem="PdU-sB-bht" secondAttribute="leading" id="Kea-ZR-dT6"/>
+                            <constraint firstItem="JGn-2N-qJg" firstAttribute="top" secondItem="Kbz-u2-rxa" secondAttribute="bottom" constant="25" id="Rud-93-hxr"/>
+                            <constraint firstItem="PdU-sB-bht" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="cUC-Dp-EmA"/>
+                            <constraint firstItem="syq-HQ-Ca5" firstAttribute="top" secondItem="JGn-2N-qJg" secondAttribute="bottom" constant="25" id="gwM-8M-aGY"/>
+                            <constraint firstItem="Kbz-u2-rxa" firstAttribute="leading" secondItem="PdU-sB-bht" secondAttribute="leading" id="rXe-VW-HNA"/>
+                            <constraint firstItem="Kbz-u2-rxa" firstAttribute="top" secondItem="PdU-sB-bht" secondAttribute="bottom" constant="25" id="w3g-id-BPp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
